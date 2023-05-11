@@ -1,0 +1,13 @@
+<label>Title of note: </label>
+<input #titleInput type="text" class="form-control">
+
+<br>
+
+<label>Content of note: </label>
+<input #contentInput type="text" class="form-control">
+
+<br>
+<button class="btn btn-primary" (click)="addNote(titleInput, contentInput)">Add Note</button>
+
+<!-- Step 1: Get the input via template reference variable (the # sign)
+Step 2: When the button is clicked send this to the addNote function -->
