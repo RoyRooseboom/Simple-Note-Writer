@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Note Writer</h1>
+    
+            <app-input-notes 
+                (note)="saveNote($event)"
+            ></app-input-notes>
+
+            <hr>
+
+            <app-show-notes
+                *ngFor="let note of notes"
+                [receivedNote]="note"
+            ></app-show-notes>
+        </div>
+    </div>
+</div>
+
