@@ -9,8 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class ShowNotesComponent {
   
-  // @Input() receivedNote: {title: string, content: string} = {title: "", content: ""};
-
   note$: Observable<{title: string, content: string }> = new Observable<{title:"", content: ""}>;
 
   constructor(private store: Store<{ note: { title: string, content: string } }>) {

@@ -9,6 +9,8 @@ import { save } from '../store/notes.actions';
   styleUrls: ['./input-notes.component.css']
 })
 export class InputNotesComponent {
+  titel = "";
+  content = "";
 
   constructor(private store: Store) {}
 
@@ -17,22 +19,22 @@ export class InputNotesComponent {
     let x;
     let y;
 
-    if(titleInput && contentInput != null) {
-      x = titleInput.textContent;
-      y = contentInput.textContent;
-    }
-    else{
-      x = "";
-      y = ""
-    }
+    // if(titleInput && contentInput != null) {
+    //   x = titleInput.textContent;
+    //   y = contentInput.textContent;
+    // }
+    // else{
+    //   x = "";
+    //   y = ""
+    // }
     
 
     const note = {
-      title : x,
-      content : y
+      title : this.titel,
+      content : this.content
     };
 
-    // this.store.dispatch(save(note));
+    this.store.dispatch(save(note));
   }
 
 

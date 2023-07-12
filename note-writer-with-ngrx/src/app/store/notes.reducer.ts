@@ -11,5 +11,10 @@ const initialState = {
 
 export const notesReducer = createReducer(
     initialState,
-    on(save, (state, action) => state)
+    on(save, (state, action) => {
+        return {
+            ...state,
+           action
+        }
+    })
 );
