@@ -14,21 +14,8 @@ export class InputNotesComponent {
 
   constructor(private store: Store) {}
 
-  addNote(titleInput: HTMLInputElement, contentInput: HTMLInputElement)
+  addNote()
   {
-    let x;
-    let y;
-
-    // if(titleInput && contentInput != null) {
-    //   x = titleInput.textContent;
-    //   y = contentInput.textContent;
-    // }
-    // else{
-    //   x = "";
-    //   y = ""
-    // }
-    
-
     const note = {
       title : this.titel,
       content : this.content

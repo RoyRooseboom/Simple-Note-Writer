@@ -1,0 +1,1 @@
+export const selectNote = (state: {note: {title: string, content:string}}) => {state.note.title, state.note.content};

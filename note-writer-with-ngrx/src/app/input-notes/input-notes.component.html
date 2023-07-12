@@ -1,11 +1,11 @@
 <label>Title of note: </label>
-<input #titleInput [(ngModel)]="titel" type="text" class="form-control">
+<input [(ngModel)]="titel" type="text" class="form-control">
 
 <br>
 
 <label>Content of note: </label>
-<input #contentInput [(ngModel)]="content" type="text" class="form-control">
+<input [(ngModel)]="content" type="text" class="form-control">
 
 <br>
-<button class="btn btn-primary" (click)="addNote(titleInput, contentInput)">Add Note</button>
+<button class="btn btn-primary" (click)="addNote()">Add Note</button>
 

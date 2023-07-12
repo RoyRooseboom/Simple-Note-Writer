@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { selectNote } from '../store/notes.selectors';
 
 @Component({
   selector: 'app-show-notes',
@@ -12,6 +13,6 @@ export class ShowNotesComponent {
   note$: Observable<{title: string, content: string }> = new Observable<{title:"", content: ""}>;
 
   constructor(private store: Store<{ note: { title: string, content: string } }>) {
-    this.note$ = store.select('note');
+    this.note$ = store.select(selectNote);
   }
 }
