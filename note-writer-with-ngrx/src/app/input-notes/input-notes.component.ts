@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { save } from '../store/notes.actions';
 
+
 @Component({
   selector: 'app-input-notes',
   templateUrl: './input-notes.component.html',
@@ -30,7 +31,7 @@ export class InputNotesComponent {
       title : x,
       content : y
     };
-    
+
     // this.store.dispatch(save(note));
   }
 
