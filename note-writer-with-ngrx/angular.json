@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/note-writer-with-ngrx",
+            "outputPath": "dist/note-writer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -86,10 +86,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "note-writer-with-ngrx:build:production"
+              "browserTarget": "note-writer:build:production"
             },
             "development": {
-              "browserTarget": "note-writer-with-ngrx:build:development"
+              "browserTarget": "note-writer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,7 +97,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "note-writer-with-ngrx:build"
+            "browserTarget": "note-writer:build"
           }
         },
         "test": {

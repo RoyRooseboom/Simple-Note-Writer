@@ -1,4 +1,5 @@
-import { Action } from '@ngrx/store'
+import { createReducer, on } from "@ngrx/store";
+import { save } from "./notes.actions";
 
 
 const initialState = {
@@ -8,6 +9,7 @@ const initialState = {
     }
 }
 
-export function notesReducer(state = initialState, action: Action) {
-
-}
+export const notesReducer = createReducer(
+    initialState,
+    on(save, (state, action) => state)
+);

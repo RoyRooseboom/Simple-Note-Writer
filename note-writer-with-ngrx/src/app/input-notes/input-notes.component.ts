@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { save } from '../store/notes.actions';
 
 @Component({
   selector: 'app-input-notes',
@@ -7,11 +9,29 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class InputNotesComponent {
 
-  @Output() note = new EventEmitter<{title:string, content:string}>();
+  constructor(private store: Store) {}
 
-  addNote(titleInput: HTMLInputElement, contentInput:HTMLInputElement)
+  addNote(titleInput: HTMLInputElement, contentInput: HTMLInputElement)
   {
-    this.note.emit({title: titleInput.value, content: contentInput.value});
+    let x;
+    let y;
+
+    if(titleInput && contentInput != null) {
+      x = titleInput.textContent;
+      y = contentInput.textContent;
+    }
+    else{
+      x = "";
+      y = ""
+    }
+    
+
+    const note = {
+      title : x,
+      content : y
+    };
+    
+    // this.store.dispatch(save(note));
   }
 
 
