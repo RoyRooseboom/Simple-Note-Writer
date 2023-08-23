@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Note Writer</h1>
+    
+            <app-input-notes 
+                (note)="saveNote($event)"
+            ></app-input-notes>
+            <app-show-notes
+                *ngFor="let note of notes"
+                [receivedNote]="note"
+            ></app-show-notes>
+        </div>
+    </div>
+</div>
+
+<!-- Step 5: The note of step 4 which emitted the event, is listend by the event binding here -> (note)="saveNote($event)". This is a event binding property,
+        because the note is a property of the component app-input-notes
+        Then it sends that event forward to the saveNote function.
+
+Step 7: With *ngFor we go through the notes array. And for each object in that array, we pass that object to the data binding of receivedNote. -->
